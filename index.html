@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./nitroxis.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="./assets/index.42fe4937.js"></script>
+    <link rel="stylesheet" href="./assets/index.aa7234db.css">
+  </head>
+
+  <body>
+    <!-- body -->
+    <div class="max-w-[1300px] mx-auto">
+      <!-- Header -->
+      <div class="flex my-2 items-center justify-between w-full">
+        <div class="flex">
+          <img
+            class="w-10 h-10 mr-3"
+            src="data:image/png;base64,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"
+            alt=""
+          />
+
+          <div
+            class="
+              flex
+              items-center
+              justify-center
+              max-w-xs
+              pl-3
+              rounded-md
+              bg-blue-50
+            "
+          >
+            <i class="mdi mdi-magnify text-xl opacity-60"></i>
+            <input class="bg-transparent" type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div class="flex mr-28">
+          <div class="flex flex-col items-center">
+            <i class="mdi mdi-home-account text-3xl"></i>
+            <h1 class="text-black border-b-2 px-4 border-black text-sm">
+              Home
+            </h1>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="mdi mdi-bell-badge text-3xl opacity-70"></i>
+            <h1 class="text-black px-4 border-black text-sm">Noitfications</h1>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <i class="mdi mdi-lan-pending text-3xl opacity-70"></i>
+            <h1 class="text-black px-4 opacity-70 text-sm">My Network</h1>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <i class="mdi mdi-server-network text-3xl opacity-70"></i>
+            <h1 class="text-black px-4 opacity-70 text-sm">Jobs</h1>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <i class="mdi mdi-forum text-3xl opacity-70"></i>
+            <h1 class="text-black px-4 opacity-70 text-sm">Messaging</h1>
+          </div>
+
+          <div
+            class="flex flex-col items-center border-r pr-2 border-r-gray-400"
+          >
+            <img
+              class="w-8 h-8 rounded-full"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+              alt=""
+            />
+            <div class="flex items-center">
+              <h1 class="text-black opacity-70 text-sm">Work</h1>
+              <i class="mdi mdi-menu-down text-2xl"></i>
+            </div>
+          </div>
+          <div class="flex space-x-3 ml-2">
+            <div class="flex flex-col items-center">
+              <i class="mdi mdi-home-account text-3xl opacity-70"></i>
+
+              <h1 class="text-black px-4 opacity-70 text-sm">Me</h1>
+            </div>
+            <h2 class="text-sm text-pink-400 max-w-[100px]">
+              Try Premium for free
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!--End Header -->
+
+      <!-- container -->
+      <div class="flex my-10 w-full px-2 justify-end">
+        <!-- 1st leftbar -->
+        <div class="flex flex-col mr-5 w-[300px]">
+          <div
+            class="flex flex-col rounded-md border shadow-sm border-gray-300"
+          >
+            <div class="bg-blue-200 h-16 w-full top-0"></div>
+            <div class="flex flex-col items-center pb-2">
+              <img
+                class="flex w-20 h-20 border border-white -mt-10 rounded-full"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+                alt=""
+              />
+              <h1 class="font-semibold text-black">Jawad Khan</h1>
+              <p class="opacity-70">Website Developer</p>
+            </div>
+
+            <hr />
+            <div class="flex flex-col p-2 text-left">
+              <p class="opacity-70">Connection</p>
+              <h2 class="font-semibold">Grow your Network</h2>
+            </div>
+
+            <hr />
+            <div class="flex flex-col text-sm p-2">
+              <p class="opacity-70">Access exclusive tools & sights</p>
+              <div class="flex">
+                <i class="mdi mdi-archive-settings text-yellow-500 mr-3"></i>
+
+                <h2 class="font-semibold">Try premim for free</h2>
+              </div>
+            </div>
+            <hr />
+            <div class="flex p-2">
+              <i class="mdi mdi-alert-box mr-3 opacity-80"></i>
+              <h2>My items</h2>
+            </div>
+          </div>
+          <div
+            class="
+              flex flex-col
+              bg-white
+              rounded-md
+              mt-8
+              px-2
+              text-sm
+              shadow-sm
+              border border-gray-300
+            "
+          >
+            <div class="flex flex-col font-semibold py-2 text-blue-600">
+              <h1 class="">Groups</h1>
+              <div class="flex justify-between">
+                <h2>Events</h2>
+                <h2 class="text-gray-500 text-2xl">+</h2>
+              </div>
+              <h1 class="">Followed Hashtags</h1>
+            </div>
+
+            <hr />
+            <div class="font-semibold py-2 text-center">
+              <h1 class="opacity-70">Discover More</h1>
+            </div>
+          </div>
+        </div>
+        <!--End 1st leftbar -->
+
+        <!-- main bar  -->
+        <div class="flex flex-col mr-5 w-[650px]">
+          <div
+            class="flex flex-col border bg-white rounded-md shadow-sm mb-2 p-3"
+          >
+            <div class="flex">
+              <img
+                class="w-10 h-10 rounded-full mr-3"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+                alt=""
+              />
+              <input
+                class="
+                  text-sm
+                  font-semibold
+                  opacity-70
+                  w-full
+                  ring-1 ring-gray-400
+                  rounded-3xl
+                  pl-3
+                "
+                type="text"
+                value="Start a post"
+              />
+            </div>
+            <hr class="my-2" />
+            <div class="flex justify-between space-x-8 mt-4">
+              <div class="flex">
+                <i
+                  class="mdi mdi-image-multiple text-2xl mr-3 text-blue-500"
+                ></i>
+                <h1 class="font-semibold opacity-60">Photo</h1>
+              </div>
+              <div class="flex">
+                <i
+                  class="mdi mdi-image-multiple text-2xl mr-3 text-green-500"
+                ></i>
+                <h1 class="font-semibold opacity-60">Video</h1>
+              </div>
+              <div class="flex">
+                <i
+                  class="mdi mdi-image-multiple text-2xl mr-3 text-pink-400"
+                ></i>
+                <h1 class="font-semibold opacity-60">Event</h1>
+              </div>
+              <div class="flex">
+                <i
+                  class="mdi mdi-image-multiple text-2xl mr-3 text-yellow-500"
+                ></i>
+                <h1 class="font-semibold opacity-60">Write Article</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex text-sm items-center justify-between">
+            <div class="bg-gray-300 w-full h-[1px] mr-2"></div>
+            <div class="flex">
+              <p>Sort:</p>
+              <h5 class="font-semibold">Top</h5>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col border bg-white rounded-md shadow-sm mt-2 p-3"
+          >
+            <div class="flex justify-between">
+              <div class="flex justify-center space-x-2">
+                <img
+                  class="w-7 h-7 rounded-full"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+                  alt=""
+                />
+                <h2 class="text-sm font-semibold opacity-90">
+                  Ayesha Jamal Hashmi
+                </h2>
+                <p class="opacity-60">supports this</p>
+              </div>
+              <div>
+                <i class="mdi mdi-dots-horizontal"></i>
+              </div>
+              <hr />
+            </div>
+            <div class="flex justify-between items-start">
+              <div class="flex flex-col">
+                <div class="flex">
+                  <h2>Tiffani Zheng</h2>
+                  <h5 class="opacity-60 text-sm">3rd +</h5>
+                  <div class="flex"></div>
+                </div>
+                <div class="flex flex-col opacity-60">
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <h4 class="">2h. <i class="mdi mdi-earth"></i></h4>
+                </div>
+              </div>
+              <div class="text-blue-600 font-semibold mt-3">+ Followed</div>
+            </div>
+            <p class="text-xs my-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              iusto vitae consectetur velit earum. Ex?
+            </p>
+            <img
+              src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758__340.jpg"
+              alt=""
+            />
+            <div class="flex space-x-1 items-center my-2">
+              <i class="mdi mdi-earth text-red-500"></i>
+              <i class="mdi mdi-earth text-yellow-500"></i>
+              <h6 class="opacity-60 text-xs">15</h6>
+            </div>
+            <hr />
+            <div class="flex opacity-60 justify-between px-2 py-3">
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col border bg-white rounded-md shadow-sm mt-2 p-3"
+          >
+            <div class="flex justify-between">
+              <div class="flex justify-center space-x-2">
+                <img
+                  class="w-7 h-7 rounded-full"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+                  alt=""
+                />
+                <h2 class="text-sm font-semibold opacity-90">
+                  Ayesha Jamal Hashmi
+                </h2>
+                <p class="opacity-60">supports this</p>
+              </div>
+              <div>
+                <i class="mdi mdi-dots-horizontal"></i>
+              </div>
+              <hr />
+            </div>
+            <div class="flex justify-between">
+              <div class="flex flex-col items-start">
+                <div class="flex">
+                  <h2>Tiffani Zheng</h2>
+                  <h5 class="opacity-60 text-sm">3rd +</h5>
+                  <div class="flex"></div>
+                </div>
+                <div class="flex flex-col opacity-60">
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <h4 class="">2h. <i class="mdi mdi-earth"></i></h4>
+                </div>
+              </div>
+              <div class="text-blue-600 font-semibold mt-3">+ Followed</div>
+            </div>
+            <p class="text-xs my-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              iusto vitae consectetur velit earum. Ex?
+            </p>
+            <img
+              src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758__340.jpg"
+              alt=""
+            />
+            <div class="flex space-x-1 items-center my-2">
+              <i class="mdi mdi-earth text-red-500"></i>
+              <i class="mdi mdi-earth text-yellow-500"></i>
+              <h6 class="opacity-60 text-xs">15</h6>
+            </div>
+            <hr />
+            <div class="flex opacity-60 justify-between px-2 py-3">
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col border bg-white rounded-md shadow-sm mt-2 p-3"
+          >
+            <div class="flex justify-between">
+              <div class="flex justify-center space-x-2">
+                <img
+                  class="w-7 h-7 rounded-full"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+                  alt=""
+                />
+                <h2 class="text-sm font-semibold opacity-90">
+                  Ayesha Jamal Hashmi
+                </h2>
+                <p class="opacity-60">supports this</p>
+              </div>
+              <div>
+                <i class="mdi mdi-dots-horizontal"></i>
+              </div>
+              <hr />
+            </div>
+            <div class="flex justify-between">
+              <div class="flex flex-col items-start">
+                <div class="flex">
+                  <h2>Tiffani Zheng</h2>
+                  <h5 class="opacity-60 text-sm">3rd +</h5>
+                  <div class="flex"></div>
+                </div>
+                <div class="flex flex-col opacity-60">
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <h4 class="">2h. <i class="mdi mdi-earth"></i></h4>
+                </div>
+              </div>
+              <div class="text-blue-600 font-semibold mt-3">+ Followed</div>
+            </div>
+            <p class="text-xs my-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              iusto vitae consectetur velit earum. Ex?
+            </p>
+            <img
+              src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758__340.jpg"
+              alt=""
+            />
+            <div class="flex space-x-1 items-center my-2">
+              <i class="mdi mdi-earth text-red-500"></i>
+              <i class="mdi mdi-earth text-yellow-500"></i>
+              <h6 class="opacity-60 text-xs">15</h6>
+            </div>
+            <hr />
+            <div class="flex opacity-60 justify-between px-2 py-3">
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col border bg-white rounded-md shadow-sm mt-2 p-3"
+          >
+            <div class="flex justify-between">
+              <div class="flex justify-center space-x-2">
+                <img
+                  class="w-7 h-7 rounded-full"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+                  alt=""
+                />
+                <h2 class="text-sm font-semibold opacity-90">
+                  Ayesha Jamal Hashmi
+                </h2>
+                <p class="opacity-60">supports this</p>
+              </div>
+              <div>
+                <i class="mdi mdi-dots-horizontal"></i>
+              </div>
+              <hr />
+            </div>
+            <div class="flex justify-between">
+              <div class="flex flex-col items-start">
+                <div class="flex">
+                  <h2>Tiffani Zheng</h2>
+                  <h5 class="opacity-60 text-sm">3rd +</h5>
+                  <div class="flex"></div>
+                </div>
+                <div class="flex flex-col opacity-60">
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <h4 class="">2h. <i class="mdi mdi-earth"></i></h4>
+                </div>
+              </div>
+              <div class="text-blue-600 font-semibold mt-3">+ Followed</div>
+            </div>
+            <p class="text-xs my-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              iusto vitae consectetur velit earum. Ex?
+            </p>
+            <img
+              src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758__340.jpg"
+              alt=""
+            />
+            <div class="flex space-x-1 items-center my-2">
+              <i class="mdi mdi-earth text-red-500"></i>
+              <i class="mdi mdi-earth text-yellow-500"></i>
+              <h6 class="opacity-60 text-xs">15</h6>
+            </div>
+            <hr />
+            <div class="flex opacity-60 justify-between px-2 py-3">
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col border bg-white rounded-md shadow-sm mt-2 p-3"
+          >
+            <div class="flex justify-between">
+              <div class="flex justify-center space-x-2">
+                <img
+                  class="w-7 h-7 rounded-full"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+                  alt=""
+                />
+                <h2 class="text-sm font-semibold opacity-90">
+                  Ayesha Jamal Hashmi
+                </h2>
+                <p class="opacity-60">supports this</p>
+              </div>
+              <div>
+                <i class="mdi mdi-dots-horizontal"></i>
+              </div>
+              <hr />
+            </div>
+            <div class="flex justify-between">
+              <div class="flex flex-col items-start">
+                <div class="flex">
+                  <h2>Tiffani Zheng</h2>
+                  <h5 class="opacity-60 text-sm">3rd +</h5>
+                  <div class="flex"></div>
+                </div>
+                <div class="flex flex-col opacity-60">
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <h4 class="">2h. <i class="mdi mdi-earth"></i></h4>
+                </div>
+              </div>
+              <div class="text-blue-600 font-semibold mt-3">+ Followed</div>
+            </div>
+            <p class="text-xs my-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              iusto vitae consectetur velit earum. Ex?
+            </p>
+            <img
+              src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758__340.jpg"
+              alt=""
+            />
+            <div class="flex space-x-1 items-center my-2">
+              <i class="mdi mdi-earth text-red-500"></i>
+              <i class="mdi mdi-earth text-yellow-500"></i>
+              <h6 class="opacity-60 text-xs">15</h6>
+            </div>
+            <hr />
+            <div class="flex opacity-60 justify-between px-2 py-3">
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col border bg-white rounded-md shadow-sm mt-2 p-3"
+          >
+            <div class="flex justify-between">
+              <div class="flex justify-center space-x-2">
+                <img
+                  class="w-7 h-7 rounded-full"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC42k8Olq_YowhFTTMw0JNot0nf_jXEJukDA&usqp=CAU"
+                  alt=""
+                />
+                <h2 class="text-sm font-semibold opacity-90">
+                  Ayesha Jamal Hashmi
+                </h2>
+                <p class="opacity-60">supports this</p>
+              </div>
+              <div>
+                <i class="mdi mdi-dots-horizontal"></i>
+              </div>
+              <hr />
+            </div>
+            <div class="flex justify-between">
+              <div class="flex flex-col items-start">
+                <div class="flex">
+                  <h2>Tiffani Zheng</h2>
+                  <h5 class="opacity-60 text-sm">3rd +</h5>
+                  <div class="flex"></div>
+                </div>
+                <div class="flex flex-col opacity-60">
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <h4 class="">2h. <i class="mdi mdi-earth"></i></h4>
+                </div>
+              </div>
+              <div class="text-blue-600 font-semibold mt-3">+ Followed</div>
+            </div>
+            <p class="text-xs my-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              iusto vitae consectetur velit earum. Ex?
+            </p>
+            <img
+              src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758__340.jpg"
+              alt=""
+            />
+            <div class="flex space-x-1 items-center my-2">
+              <i class="mdi mdi-earth text-red-500"></i>
+              <i class="mdi mdi-earth text-yellow-500"></i>
+              <h6 class="opacity-60 text-xs">15</h6>
+            </div>
+            <hr />
+            <div class="flex opacity-60 justify-between px-2 py-3">
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+              <div class="flex space-x-2 items-center">
+                <i class="mdi mdi-thumb-up-outline text-2xl"></i>
+                <h2>Like</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End main bar  -->
+
+        <!-- 3rd bar -->
+        <div class="flex flex-col mr-24 w-[350px] hidden lg:flex">
+          <div
+            class="
+              flex flex-col
+              border
+              bg-white
+              rounded-md
+              space-y-4
+              shadow-sm
+              mt-2
+              p-3
+            "
+          >
+            <div class="flex justify-between">
+              <h1 class="font-semibold">Add to your feedback</h1>
+              <i class="mdi mdi-earth"></i>
+            </div>
+            <div class="flex">
+              <img
+                class="w-10 h-10 rounded-full mr-3"
+                src="https://cdn.pixabay.com/photo/2015/06/12/21/58/child-807547__340.jpg"
+                alt=""
+              />
+              <div class="flex flex-col justify-start">
+                <h2 class="font-semibold">Job Finder</h2>
+                <p class="text-xs mb-2">company + human resoursec</p>
+                <h2
+                  class="
+                    border border-gray-400
+                    rounded-2xl
+                    px-2
+                    py-1
+                    w-24
+                    text-center
+                    font-semibold
+                    opacity-60
+                  "
+                >
+                  + Follow
+                </h2>
+              </div>
+            </div>
+            <div class="flex">
+              <img
+                class="w-10 h-10 rounded-full mr-3"
+                src="https://cdn.pixabay.com/photo/2015/06/12/21/58/child-807547__340.jpg"
+                alt=""
+              />
+              <div class="flex flex-col justify-start">
+                <h2 class="font-semibold">Job Finder</h2>
+                <p class="text-xs mb-2">company + human resoursec</p>
+                <h2
+                  class="
+                    border border-gray-400
+                    rounded-2xl
+                    px-2
+                    py-1
+                    w-24
+                    text-center
+                    font-semibold
+                    opacity-60
+                  "
+                >
+                  + Follow
+                </h2>
+              </div>
+            </div>
+            <div class="flex">
+              <img
+                class="w-10 h-10 rounded-full mr-3"
+                src="https://cdn.pixabay.com/photo/2015/06/12/21/58/child-807547__340.jpg"
+                alt=""
+              />
+              <div class="flex flex-col justify-start">
+                <h2 class="font-semibold">Job Finder</h2>
+                <p class="text-xs mb-2">company + human resoursec</p>
+                <h2
+                  class="
+                    border border-gray-400
+                    rounded-2xl
+                    px-2
+                    py-1
+                    w-24
+                    text-center
+                    font-semibold
+                    opacity-60
+                  "
+                >
+                  + Follow
+                </h2>
+              </div>
+            </div>
+            <div class="flex">
+              <img
+                class="w-10 h-10 rounded-full mr-3"
+                src="https://cdn.pixabay.com/photo/2015/06/12/21/58/child-807547__340.jpg"
+                alt=""
+              />
+              <div class="flex flex-col justify-start">
+                <h2 class="font-semibold">Job Finder</h2>
+                <p class="text-xs mb-2">company + human resoursec</p>
+                <h2
+                  class="
+                    border border-gray-400
+                    rounded-2xl
+                    px-2
+                    py-1
+                    w-24
+                    text-center
+                    font-semibold
+                    opacity-60
+                  "
+                >
+                  + Follow
+                </h2>
+              </div>
+            </div>
+            <h3>
+              View all recommendations <i class="mdi mdi-arrow-right"></i>
+            </h3>
+          </div>
+          <div
+            class="
+              flex flex-col
+              border
+              bg-white
+              rounded-md
+              space-x-2
+              shadow-sm
+              mt-2
+              p-3
+            "
+          >
+            <div>
+              <h2>Ad ...</h2>
+              <h3 class="text-xs text-center opacity-60 my-3 max-w-xs">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                ex maxime dicta.
+              </h3>
+            </div>
+            <div class="flex space-x-3 mb-2">
+              <img
+                class="w-16 h-16 rounded-full"
+                src="data:image/png;base64,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"
+                alt=""
+              />
+              <img
+                class="w-16 h-16"
+                src="data:image/png;base64,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"
+                alt=""
+              />
+            </div>
+            <p class="opacity-70 mb-2">Start Subcription today</p>
+            <h3
+              class="
+                text-blue-600
+                border border-blue-600
+                rounded-2xl
+                font-semibold
+                py-1
+                px-2
+                text-center
+              "
+            >
+              Try for Free
+            </h3>
+          </div>
+          <div
+            class="
+              flex flex-wrap
+              text-xs
+              px-2
+              mt-4
+              space-x-3
+              justify-center
+              opacity-60
+            "
+          >
+            <h5>About</h5>
+            <h5>Accessibility</h5>
+            <h5>Help Center</h5>
+            <h5 class="mdi mdi-chevron-down">Privicy & Terms</h5>
+            <h5>More</h5>
+            <h5>Advertising</h5>
+            <h5>About</h5>
+            <h5>Accessibility</h5>
+            <h5>Help Center</h5>
+            <h5 class="mdi mdi-chevron-down">Privicy & Terms</h5>
+            <h5>Advertising</h5>
+            <h5>More</h5>
+          </div>
+
+          <div class="flex items-center text-xs justify-center mt-4 space-x-1">
+            <h2>Linkiden</h2>
+            <img
+              class="w-4 h-4"
+              src="data:image/png;base64,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"
+              alt=""
+            />
+            <h3>
+              Linkiden corporation
+              <i class="mdi mdi-alpha-c-circle-outline"></i> 2021
+            </h3>
+          </div>
+        </div>
+
+        <!--End 3rd bar -->
+
+        <!-- right sidebar -->
+        <div
+          class="
+            flex flex-col
+            border
+            bg-white
+            rounded-md
+            shadow-md
+            mt-2
+            p-3
+            min-h-screen
+            absolute
+            right-0
+            space-y-3
+            w-[300px]
+            hidden
+            lg:flex
+          "
+        >
+          <div class="flex justify-between">
+            <div class="flex">
+              <img
+                class="w-6 h-6 rounded-full mr-2"
+                src="https://cdn.pixabay.com/photo/2016/11/22/06/05/girl-1848454__340.jpg"
+                alt=""
+              />
+              <h1 class="text-sm font-semibold">Messaging</h1>
+            </div>
+            <hr />
+
+            <div class="flex space-x-2">
+              <i class="mdi mdi-dots-horizontal"></i>
+              <i class="mdi mdi-earth"></i>
+              <i class="mdi mdi-earth"></i>
+            </div>
+          </div>
+          <div
+            class="
+              flex
+              items-center
+              justify-center
+              max-w-xs
+              pl-3
+              rounded-md
+              bg-blue-50
+            "
+          >
+            <i class="mdi mdi-magnify text-xl opacity-60"></i>
+            <input
+              class="bg-transparent"
+              type="text"
+              placeholder="Search messages"
+            />
+          </div>
+          <div class="flex">
+            <img
+              class="w-10 h-10 rounded-full mr-3"
+              src="https://cdn.pixabay.com/photo/2015/06/12/21/58/child-807547__340.jpg"
+              alt=""
+            />
+            <div class="flex flex-col justify-start">
+              <h2 class="font-semibold">Job Finder</h2>
+              <p class="text-xs">company + human resoursec</p>
+              <h2 class="font-xs opacity-60">linkiden offer for gree</h2>
+            </div>
+          </div>
+        </div>
+        <!-- End right sidebar -->
+      </div>
+      <!--End container -->
+    </div>
+    <!--End body -->
+
+    
+  </body>
+</html>
